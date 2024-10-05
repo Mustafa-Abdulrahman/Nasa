@@ -1,0 +1,231 @@
+:root {
+  --main-padding: 16px;
+  --main-margin: 16px;
+  --main-transition: 0.3s;
+  --main-gap: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: var(--main-transition);
+  user-select: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(ke.jpg); /* الخلفية */
+  background-size: cover; /* لجعل الخلفية تغطي الشاشة بشكل كامل */
+  background-position: center; /* لضمان أن تكون الخلفية مركزة */
+  background-attachment: fixed; /* لتثبيت الخلفية أثناء التمرير */
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* لمنع التمرير */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1400px;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'Caveat Brush';
+  src: url('CaveatBrush-Regular.ttf');
+}
+.atmosphere{ 
+  transform: translateX(-50%);
+  text-align: right; 
+  position:relative; 
+  top: -60px; 
+  left: 280px; 
+}
+
+.habitability{ 
+  transform: translateX(-50%);
+  text-align: right; 
+  position:relative; 
+  top: 20px; 
+  left: 200px; 
+}
+
+.orbital-period{ 
+  transform: translateX(-50%);
+  text-align: right; 
+  position:relative; 
+  top: 60px; 
+  left: 280px; 
+}
+
+.composition{ 
+  transform: translateX(-50%);
+  position:relative; 
+  top: -65px; 
+  right: 80px; 
+}
+
+.characteristics{ 
+  transform: translateX(-50%);
+  position:relative; 
+  top: 50px; 
+  right: 0px; 
+}
+
+.surface-area{ 
+  transform: translateX(-50%);
+  position:relative; 
+  top: 85px; 
+  right: 80px; 
+}
+
+.planet-info-left, .planet-info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60vh;
+  font-family: 'Caveat Brush';
+  width: 200px;
+}
+
+.planet-info-left h3, .planet-info-right h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.planet-info-left p, .planet-info-right p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+
+.planet-image img {
+  border-radius: 50%;
+  width: 700px;
+  height: auto;
+  object-fit: cover;
+}
+
+.planet-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Circles with numbers around the planet */
+ /* Positioning the circles beside the text */
+ /* Positioning the circles beside the text without affecting the text layout */
+.circle {
+  position: absolute; /* يجعلك تتحكم في موضع الدائرة بحرية */
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px; /* حجم الدائرة */
+  height: 30px; /* حجم الدائرة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Caveat Brush';
+  font-size: 1rem; /* حجم الخط داخل الدائرة */
+  color: white;
+  font-weight: bold;
+}
+
+/* Adjust positioning for each circle */
+.atmosphere {
+  position: relative; /* لضمان موضع النص ثابت */
+}
+
+.habitability {
+  position: relative; /* لضمان موضع النص ثابت */
+}
+
+.orbital-period {
+  position: relative; /* لضمان موضع النص ثابت */
+}
+
+.composition {
+  position: relative; /* لضمان موضع النص ثابت */
+}
+
+.characteristics {
+  position: relative; /* لضمان موضع النص ثابت */
+}
+
+.surface-area {
+  position: relative; /* لضمان موضع النص ثابت */
+}
+
+/* Positioning the circles beside the text */
+.circle1 { top: 10%; left: 95%; transform: translateY(-50%); } /* بجانب Atmosphere */
+.circle2 { top: 40%; left: 95%; transform: translateY(-50%); } /* بجانب Habitability */
+.circle3 { top: 70%; left: 95%; transform: translateY(-50%); } /* بجانب Orbital Period */
+
+.circle4 { top: 10%; right: 90%; transform: translateY(-50%); } /* بجانب Composition */
+.circle5 { top: 40%; right: 90%; transform: translateY(-50%); } /* بجانب Characteristics */
+.circle6 { top: 70%; right: 90%; transform: translateY(-50%); } /* بجانب Surface Area and Diameter */
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+}
+
+/* Gradient Button */
+.btn {
+  background: linear-gradient(180deg, #788E9C, #243a470e);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 5px 30px 50px #788E9C(0, 0, 0, 20);
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #243a471c, #788E9C);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .planet-image img {
+      max-width: 300px;
+  }
+
+  .planet-info-left, .planet-info-right {
+      width: 100%;
+      text-align: center;
+  }
+
+  .circle {
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+  }
+
+  .buttons {
+      margin-top: 20px;
+  }
+}

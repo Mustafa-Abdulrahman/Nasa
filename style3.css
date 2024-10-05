@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: white;
+    overflow-y: scroll; /* تمكين التمرير العمودي */
+}
+
+.container {
+    display: flex; /* استخدام الفلكس لعرض العناصر داخل الصفحة */
+    justify-content: center; /* محاذاة العناصر في الوسط */
+    align-items: center; /* محاذاة العناصر عمودياً */
+    padding: 50px;
+    min-height: 100vh; /* كل حاوية تأخذ ارتفاع الشاشة بالكامل */
+}
+
+.content {
+    width: 50%; /* عرض النصوص */
+    text-align: center; /* محاذاة النص في الوسط */
+    margin-left: 20px; /* مساحة بين الصورة والنص */
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.image-container {
+    width: 40%;
+    display: flex; /* لتوسيع الصورة */
+    justify-content: center; /* محاذاة الصورة في الوسط */
+    position: relative; /* يمكن تعديلها لتكون ثابتة إذا لزم الأمر */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 50%; /* شكل دائري */
+   margin-left: 20%;
+}
+
+/* Animation for rotating the planet */
+@keyframes rotatePlanet {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

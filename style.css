@@ -1,0 +1,247 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif; /* تغيير الخط */
+}
+
+.astronaut img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+}
+
+.full-page-image img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.start-journey-btn {
+    position: absolute;
+    top: 55%;
+    left: 100px;
+    width: 200px;
+}
+
+.start-journey-btn button {
+    background-color: rgb(76, 109, 158);
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.start-journey-btn button:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+ /* إخفاء checkbox */
+ /* القائمة */
+.menu {
+    position: fixed;
+    top: 50%; /* وضع القائمة في منتصف الشاشة رأسياً */
+    right: -200px; /* إخفاء القائمة خارج الشاشة */
+    width: 180px;
+    height: auto;
+    background-color: rgba(222, 215, 215, 0.5);
+    padding: 15px;
+    transition: right 0.4s ease; /* إضافة حركة */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transform: translateY(-50%);
+}
+
+/* عند فتح القائمة */
+.menu-toggle:checked + .menu-icon + .menu {
+    right: 0; /* إظهار القائمة */
+}
+
+/* الأيقونة */
+.menu-icon {
+    position: fixed;
+    top: 50%;
+    right: 10px; /* يكون مكانها قريب من الحافة اليمنى */
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgb(55, 94, 153);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: right 0.4s ease; /* انتقال سلس لتحرك الأيقونة */
+}
+
+/* عند إظهار القائمة تكون الأيقونة أولها */
+.menu-toggle:checked + .menu-icon {
+    right: 190px; /* الأيقونة تتحرك مع القائمة */
+}
+
+/* تنسيق السهم داخل الأيقونة */
+.menu-icon span {
+    color: rgb(24, 47, 179);
+    font-size: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+/* تدوير السهم عند فتح القائمة */
+.menu-toggle:checked + .menu-icon span {
+    transform: rotate(180deg);
+}
+
+ /* تنسيق النص داخل القائمة */
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem; /* حجم الخط */
+    font-weight: bold; /* جعل الخط عريض */
+    transition: color 0.3s ease, transform 0.3s ease; /* انتقال سلس لتأثير hover */
+}
+
+.menu ul li {
+    margin: 15px 0; /* التباعد بين العناصر */
+}
+
+/* تأثير hover على الروابط */
+.menu ul li a:hover {
+    color: #19087e; /* تغيير اللون عند التمرير */
+    transform: scale(1.1); /* تكبير النص قليلاً */
+}
+
+
+
+/* عند تحديد checkbox تظهر القائمة */
+.menu-toggle:checked + .menu-icon + .menu {
+    right: 0;
+}
+
+/* تنسيق الأيقونة الدائرية */
+.menu-icon {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgb(76, 109, 158);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+/* تدوير السهم عند فتح القائمة */
+.menu-toggle:checked + .menu-icon span {
+    transform: rotate(180deg);
+}
+
+/* بقية التنسيقات كما هي */
+.astronaut img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+}
+
+.start-journey-btn {
+    position: absolute;
+    top: 55%;
+    left: 100px;
+    width: 200px;
+}
+
+.start-journey-btn button {
+    background-color: rgb(76, 109, 158);
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.start-journey-btn button:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.welcome-text h1 {
+    font-size: 4rem;
+}
+
+.welcome-text p {
+    font-size: 1.5rem;
+}
+
+.sidebar-content {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    right: 220px;
+    border-radius: 10px;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.welcome-text h1 {
+    font-size: 4rem;
+}
+
+.welcome-text p {
+    font-size: 1.5rem;
+}
+
+ 
+
+.sidebar-content {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    right: 220px;
+    border-radius: 10px;
+}
